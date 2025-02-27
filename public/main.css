@@ -1,9 +1,9 @@
 body {
+    font-family: Georgia, serif;
     line-height: 1.6;
     font-size: 18px;
     color: #444;
     margin: 0;
-    font-family: Georgia, serif;
 }
 
 section {
@@ -47,8 +47,8 @@ p {
 /* On smaller screens, switch to a single column */
 @media (max-width: 768px) {
     .text-area {
-        columns: 1;
         -webkit-columns: 1;
         -moz-columns: 1;
+        columns: 1;
     }
 }

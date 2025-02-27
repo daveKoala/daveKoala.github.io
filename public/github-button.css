@@ -1,25 +1,25 @@
     .github-btn {
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: #333;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease;
+        justify-content: center;
+        background-color: #333;
+        text-decoration: none;
+        align-items: center;
+        border-radius: 50%;
+        position: fixed;
+        display: flex;
         z-index: 1000;
+        bottom: 40px;
+        height: 60px;
+        color: white;
+        right: 40px;
+        width: 60px;
     }
 
     .github-btn:hover {
-        transform: scale(1.1);
-        background-color: #2b2b2b;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        background-color: #2b2b2b;
+        transform: scale(1.1);
     }
 
     .github-btn i {

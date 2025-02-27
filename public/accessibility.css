@@ -1,0 +1,42 @@
+/* Skip link - hidden visually but available to screen readers */
+.skip-link {
+    position: absolute;
+    background: #000;
+    left: -9999px;
+    top: -9999px;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+    left: 0;
+}
+
+/* For visually hidden content that should be available to screen readers */
+.visually-hidden {
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+}
+
+/* Focus styles for keyboard navigation */
+:focus {
+    outline: 2px solid #4d90fe;
+    outline-offset: 2px;
+}
+
+/* Make sure interactive elements have appropriate hover/focus states */
+a:hover,
+a:focus,
+button:hover,
+button:focus {
+    text-decoration: underline;
+}
