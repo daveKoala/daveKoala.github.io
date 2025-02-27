@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Single Webpage Example</title>
+  <!-- Link to separate CSS files -->
+  <link rel="stylesheet" href="public/gallery.css">
+  <link rel="stylesheet" href="public/main.css">
+  <link rel="stylesheet" href="public/nav.css">
+</head>
+<body>
+  <!-- Static full-width navigation bar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#project">Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area centered with 2/3 width -->
+  <main>
+    <div class="container">
+      <h1>Why I'm Building Simple Static Sites Again in 2025</h1>
+      <p>After years of working with frameworks like Vue and React, and spending much of my time on backend development,
+      architecture, and CI/CD, I've decided to take a step back—back to the fundamentals of HTML, CSS, and JavaScript. This
+      isn't about rejecting modern tools; it's about rediscovering the joy of building something from scratch, without the
+      added layers of abstraction.</p>
+            <!-- Lookbook Gallery Section -->
+      <section class="gallery" id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid" id="gallery-grid" >
+        </div>
+      </section>
+      <section class="about" id="about">
+        <h2>About</h2>
+        <div class="text-area">
+        <p>
+            Mark Rothko was a Latvian American abstract painter. He is best known for his color field paintings that depicted irregular and painterly
+            rectangular regions of color, which he produced from 1949 to 1970. 
+        </p>
+        <p>
+            Although Rothko did not personally subscribe to any
+            one school, he is associated with the American abstract expressionism movement of modern art.
+        </p>
+        <!-- Additional paragraphs as needed -->
+        </div>
+
+      </section>
+
+      <section class="project" id="project">
+        <h2>Project</h2>
+        <div>
+        <p>
+            In the early days of the web, a site was just a collection of files—no dependencies, no complex build steps, no
+            JavaScript bundlers. You wrote some HTML, styled it with CSS, added a bit of JavaScript if needed, and it just worked.
+            <h3>
+And it worked fast.
+            </h3>
+            <p>Even on slow connections, these sites loaded quickly and were easy to maintain. </p><p>Today, the web is more powerful than ever, but also more bloated. Many sites ship hundreds of kilobytes (or megabytes)
+            of JavaScript just to display a few paragraphs of text. While frameworks solve real problems, they also introduce
+            complexity that isn't always necessary—especially for content-driven, mostly static websites.
+        </p>
+        <h3>
+          So why does this approach still make sense in 2025?
+        </h3>
+        <ul>
+            
+            <li>Performance & Simplicity - No client-side hydration, no virtual DOM, no unnecessary JavaScript. Just fast, efficient
+            pages that load instantly.</li>
+            <li>
+              Maintainability - A simple HTML file is easy to edit. Changes can be handled by modifying the page and pushing through a
+              CI/CD pipeline. No dependencies to update, no breaking changes from framework upgrades.
+            </li>
+            <li>
+              Resilience - A plain HTML page will still render even if JavaScript fails. It works across all browsers, even
+              low-powered devices.
+            </li>
+            <li>
+              The Joy of Creation - There's something deeply satisfying about opening an empty folder, writing a few lines of code,
+              and seeing a fully functional website come to life. No need to configure a build system or troubleshoot dependency issues—just build and ship.
+            </li>
+            
+          </ul>
+            This isn't about nostalgia for nostalgia's sake. It's about making conscious choices. Sometimes, the simplest approach
+            is still the best one.
+        <!-- Additional paragraphs as needed -->
+        </div>
+
+      </section>
+    </div>
+  </main>
+    <script src="public/gallery.js"></script>
+</body>
+</html>

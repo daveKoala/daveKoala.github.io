@@ -1,0 +1,54 @@
+body {
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+    margin: 0;
+    font-family: Georgia, serif;
+}
+
+section {
+    padding-top: 20px;
+}
+
+.container {
+    /* centers the container horizontally */
+    margin: 0px auto;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 66.66%;
+}
+
+/* Optional: Basic styling for the main content */
+h1 {
+    font-family: Georgia, serif;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-family: Georgia, serif;
+    line-height: 1.6;
+    margin-top: 0px;
+}
+
+.text-area {
+    /* Two columns with a gap */
+    -webkit-columns: 2;
+    column-gap: 20px;
+    -moz-columns: 2;
+    columns: 2;
+    /* padding: 20px; */
+}
+
+/* On smaller screens, switch to a single column */
+@media (max-width: 768px) {
+    .text-area {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+}

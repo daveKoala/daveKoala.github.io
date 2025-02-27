@@ -1,0 +1,29 @@
+/* Ensure the nav bar spans the full width */
+nav {
+    background-color: #e94c39;
+    padding: 0px 0px;
+    position: fixed;
+    color: #fff;
+    width: 100%;
+}
+
+/* Style the unordered list for horizontal layout */
+nav ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Inline list items */
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Navigation links styling */
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
