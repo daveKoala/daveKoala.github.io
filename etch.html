@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Canonical URL -->
+    <meta name="canonical" content="https://davekoala.github.io/">
+
+    <!-- Robots Control -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Simple Static Sites Again in 2025">
+    <meta property="og:description"
+        content="Why I'm returning to simple, fast, and maintainable static websites in an era of complex frameworks.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourwebsite.com/public/og-image.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Simple Static Sites Again in 2025">
+    <meta name="twitter:description"
+        content="Why I'm returning to simple, fast, and maintainable static websites in an era of complex frameworks.">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/twitter-image.jpg">
+
+    <!-- Theme Color for Browser UI -->
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Simple Static Sites Again in 2025</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to separate CSS files -->
+    <link rel="stylesheet" href="public/main.css">
+    <link rel="stylesheet" href="public/github-button.css">
+    <link rel="stylesheet" href="public/gallery.css">
+    <link rel="stylesheet" href="public/nav.css">
+    <link rel="stylesheet" href="public/etch.css">
+    <link rel="stylesheet" href="public/accessibility.css">
+
+</head>
+
+<body>
+    <!-- Static full-width navigation bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#">Home</a></li>
+                <li><a href="index.html#project">Project</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="https://davekoala.github.io/blog/">Blog</a></li>
+                <li><a href="./etch.html">Etch</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+    <!-- Main content area centered with 2/3 width -->
+    <main role="main">
+        <div class="container">
+
+            <div class="etch-a-sketch">
+                <div class="screen">
+                    <canvas id="etchCanvas" width="390" height="348"></canvas>
+                </div>
+                <div class="knobs">
+                    <div class="knob">
+                        <div class="knob-line"></div>
+                    </div>
+
+                    <img src="public/etch_a_sketch.webp" alt="Etch A Sketch Logo" class="logo" />
+
+                    <div class="knob">
+                        <div class="knob-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="public/etch.js"></script>
+</body>
+
+</html>
