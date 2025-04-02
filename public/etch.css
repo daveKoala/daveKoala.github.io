@@ -1,73 +1,82 @@
-    .etch-a-sketch {
-        background-color: #cc0000;
-        border-radius: 20px;
-        margin: 2em auto;
-        width: 400px;
-        height: 500px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    }
+.etch-a-sketch {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  justify-content: space-between;
+  background-color: #cc0000;
+  flex-direction: column;
+  border-radius: 20px;
+  align-items: center;
+  margin: 6em auto;
+  height: 500px;
+  padding: 20px;
+  display: flex;
+  width: 400px;
+}
 
-    .screen {
-        background-color: #eeeeee;
-        border: 6px solid #999;
-        border-radius: 10px;
-        width: 100%;
-        height: 70%;
-        position: relative;
-    }
+.screen {
+  background-color: #eeeeee;
+  border: 6px solid #999;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 70%;
+}
 
+canvas {
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
 
-    canvas {
-        position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-    }
+.knobs {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding: 0 30px;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
 
-    .knobs {
-        display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            margin-top: 30px;
-            padding: 0 30px;
-            gap: 10px;
-    }
+.knob {
+  box-shadow: inset -2px -2px 5px #fff, inset 2px 2px 5px #999;
+  background-color: #eeeeee;
+  justify-content: center;
+  border: 4px solid #999;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+  /* Prevent knobs from shrinking */
+  flex-shrink: 0;
+  display: flex;
+  height: 80px;
+  width: 80px;
+}
 
-        .logo {
-            height: 40px;
-            object-fit: contain;
-            padding: 0 10px;
-        }
+.knob-line {
+  transform-origin: bottom center;
+  transform: rotate(0deg);
+  background-color: #333;
+  border-radius: 2px;
+  height: 60px;
+  width: 4px;
+}
 
+.logo-container {
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Take all available space between knobs */
+  display: flex;
+  /* Match knob height */
+  height: 100px;
+  flex: 1;
+}
 
-        .knob {
-            position: relative;
-            background-color: #eeeeee;
-            border: 4px solid #999;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            box-shadow: inset -2px -2px 5px #fff,
-                inset 2px 2px 5px #999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    
-        .knob-line {
-            width: 4px;
-            height: 20px;
-            background-color: #333;
-            border-radius: 2px;
-            transform-origin: bottom center;
-            transform: rotate(0deg);
-            transition: transform 0.1s ease-out;
-        }
+.logo {
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
+}
