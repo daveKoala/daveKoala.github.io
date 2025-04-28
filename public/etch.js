@@ -2,7 +2,7 @@ const canvas = document.getElementById("etchCanvas");
 const ctx = canvas.getContext("2d");
 const leftKnob = document.querySelector(".knobs .knob:first-child");
 const rightKnob = document.querySelector(".knobs .knob:last-child");
-
+const shake_me_baby = document.querySelector(".shake_me_baby");
 // Start position
 let x = canvas.width / 2;
 let y = canvas.height / 2;
@@ -19,6 +19,32 @@ ctx.beginPath();
 ctx.moveTo(x, y);
 ctx.lineTo(x, y);
 ctx.stroke();
+
+function fadeAndClearCanvas() {
+  let opacity = 0;
+  const fadeStep = 0.05; // how fast it fades (smaller = slower)
+  const fadeInterval = setInterval(() => {
+    opacity += fadeStep;
+    ctx.fillStyle = `rgba(255, 255, 255, ${fadeStep})`; // semi-transparent white
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    if (opacity >= 1) {
+      clearInterval(fadeInterval);
+      ctx.clearRect(0, 0, canvas.width, canvas.height); // full clear after fade
+      // Re-draw starting point after clear
+      x = canvas.width / 2;
+      y = canvas.height / 2;
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      ctx.lineTo(x, y);
+      ctx.stroke();
+    }
+  }, 50); // how often to apply the fading (ms)
+}
+
+shake_me_baby.addEventListener("mouseover", function () {
+  fadeAndClearCanvas();
+});
 
 document.addEventListener("keydown", function (event) {
   const step = 5;
